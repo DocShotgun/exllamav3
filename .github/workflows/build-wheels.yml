@@ -95,6 +95,7 @@ jobs:
           
           $env:CUDA_PATH = $env:CONDA_PREFIX
           $env:CUDA_HOME = $env:CONDA_PREFIX
+          $env:TORCH_CUDA_ARCH_LIST = "8.0 8.6 8.9 9.0 12.0"
 
           python setup.py bdist_wheel --dist-dir=dist
           
