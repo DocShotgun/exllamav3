@@ -63,7 +63,7 @@ jobs:
           cuda: "${{ matrix.cuda }}"
           linux-local-args: '["--toolkit"]'
           method: "network"
-          sub-packages: '["nvcc"]'
+          sub-packages: '["nvcc", "cudart", "cublas", "cufft", "curand", "cusolver", "cusparse"]'
           non-cuda-sub-packages: '["libcusparse-dev"]'
         if: runner.os != 'Windows'
 
