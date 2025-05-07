@@ -63,7 +63,8 @@ jobs:
           cuda: "${{ matrix.cuda }}"
           linux-local-args: '["--toolkit"]'
           method: "network"
-          sub-packages: '["nvcc", "libcusparse-dev"]'
+          sub-packages: '["nvcc"]'
+          non-cuda-sub-packages: '["libcusparse-dev"]'
         if: runner.os != 'Windows'
 
       - name: Install the latest version of uv and set the python version
