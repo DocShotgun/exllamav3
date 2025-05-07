@@ -53,7 +53,7 @@ jobs:
           cuda: "${{ matrix.cuda }}"
           method: "network"
           sub-packages: '["nvcc", "cudart", "cublas", "cufft", "curand", "cusolver", "cusparse", "visual_studio_integration"]'
-          non-cuda-sub-packages: '["libcusparse-dev", "libcublas-dev", "libcufft-dev", "libcufile-dev", "libcurand-dev", "libcusolver-dev"]'
+          non-cuda-sub-packages: '["libcusparse", "libcublas", "libcufft", "libcufile", "libcurand", "libcusolver"]'
         if: runner.os == 'Windows'
 
       # From FA2 repo
